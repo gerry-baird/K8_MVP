@@ -8,3 +8,15 @@ The charts have been adapted from charts published by IBM here : https://github.
 The charts and docker build files in this repository enable the creation of a MQ Queue Manager network.
 
 ![MQ Network](/images/hubandspoke.jpg)
+
+
+
+### Some Really Useful Links
+
+MQ on Docker Hub
+https://hub.docker.com/r/ibmcom/mq/
+
+Usage guide for the IBM MQ Docker image :
+https://github.com/ibm-messaging/mq-container/blob/master/docs/usage.md
+
+
