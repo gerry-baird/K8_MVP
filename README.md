@@ -6,3 +6,5 @@ IBM Cloud Kubernetes Service (IKS) or IBM Cloud Private (ICP).
 The charts have been adapted from charts published by IBM here : https://github.com/IBM/charts
 
 The charts and docker build files in this repository enable the creation of a MQ Queue Manager network.
+
+![MQ Network](/images/hubandspoke.jpg)
