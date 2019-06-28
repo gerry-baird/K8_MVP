@@ -1,0 +1,76 @@
+* Point to point configuration for Spoke QM
+
+DEFINE QREMOTE('HUB.QUEUE') REPLACE
+DEFINE QLOCAL('FROSTY.CARROT') REPLACE
+DEFINE QLOCAL('toHUB') +
+USAGE(XMITQ) +
+   REPLACE
+
+DEFINE QREMOTE('HUB.QUEUE') +
+   CLUSNL(' ') +
+   CLUSTER(' ') +
+   CLWLPRTY(0) +
+   CLWLRANK(0) +
+   CUSTOM(' ') +
+   DEFBIND(OPEN) +
+   DEFPRTY(0) +
+   DEFPSIST(NO) +
+   DEFPRESP(SYNC) +
+   DESCR(' ') +
+   PUT(ENABLED) +
+   RQMNAME('HUB') +
+   RNAME('HUB.QUEUE') +
+   SCOPE(QMGR) +
+   XMITQ('toHUB') +
+   REPLACE
+
+DEFINE CHANNEL('toHUB') +
+   CHLTYPE(SDR) +
+*  ALTDATE(2019-06-25) +
+*  ALTTIME(16.57.46) +
+   BATCHHB(0) +
+   BATCHINT(0) +
+   BATCHLIM(5000)  +
+   BATCHSZ(50) +
+   CERTLABL(' ') +
+   COMPHDR(NONE) +
+   COMPMSG(NONE) +
+   CONNAME('169.62.189.122(30121)') +
+   CONVERT(NO) +
+   DESCR(' ') +
+   DISCINT(6000) +
+   HBINT(300) +
+   KAINT(AUTO) +
+   LOCLADDR(' ') +
+   LONGRTY(999999999) +
+   LONGTMR(1200) +
+   MAXMSGL(4194304) +
+   MCANAME(' ') +
+   MCATYPE(PROCESS) +
+   MCAUSER(' ') +
+   MONCHL(QMGR) +
+   MSGDATA(' ') +
+   MSGEXIT(' ') +
+   NPMSPEED(FAST) +
+   PASSWORD(' ') +
+   PROPCTL(COMPAT) +
+   RCVDATA(' ') +
+   RCVEXIT(' ') +
+*  RESETSEQ(NO) +
+   SCYDATA(' ') +
+   SCYEXIT(' ') +
+   SENDDATA(' ') +
+   SENDEXIT(' ') +
+   SEQWRAP(999999999) +
+   SHORTRTY(10) +
+   SHORTTMR(60) +
+   SSLCIPH(' ') +
+   SSLPEER(' ') +
+   STATCHL(QMGR) +
+   TRPTYPE(TCP) MODENAME(' ') TPNAME(' ') +
+   USEDLQ(YES) +
+   USERID(' ') +
+   XMITQ('toHUB') +
+   REPLACE
+
+   START CHANNEL('toHUB')
