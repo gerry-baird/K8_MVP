@@ -16,7 +16,7 @@ The charts and docker build files in this repository enable the creation of a MQ
 MQ on Docker Hub
 https://hub.docker.com/r/ibmcom/mq/
 
-Usage guide for the IBM MQ Docker image :
-https://github.com/ibm-messaging/mq-container/blob/master/docs/usage.md
+Git Repo for IBM MQ Docker image :
+https://github.com/ibm-messaging/mq-container
 
 
